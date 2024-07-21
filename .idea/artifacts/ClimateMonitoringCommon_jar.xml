@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ClimateMonitoringCommon:jar">
+    <output-path>$PROJECT_DIR$/bin/ClimateMonitoringCommon_jar</output-path>
+    <root id="archive" name="ClimateMonitoringCommon.jar">
+      <element id="module-output" name="ClimateMonitoringCommon" />
+    </root>
+  </artifact>
+</component>
