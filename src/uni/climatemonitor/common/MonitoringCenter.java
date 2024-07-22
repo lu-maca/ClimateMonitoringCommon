@@ -20,13 +20,11 @@ public class MonitoringCenter implements Serializable {
 
     String name;
     String address;
-    Location monitoredLocation;
     String id;
 
-    public MonitoringCenter(String name, String address, Location monitoredLocation, String id) {
+    public MonitoringCenter(String name, String address, String id) {
         this.name = name;
         this.address = address;
-        this.monitoredLocation = monitoredLocation;
         this.id = id;
     }
 
@@ -37,11 +35,7 @@ public class MonitoringCenter implements Serializable {
     public String getName() {
         return name;
     }
-
-    public Location getMonitoredLocation() {
-        return monitoredLocation;
-    }
-
+    
     public String getId() { return id; }
 
     @Override
