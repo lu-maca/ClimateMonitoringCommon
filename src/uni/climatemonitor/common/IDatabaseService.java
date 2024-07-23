@@ -10,9 +10,9 @@ import java.util.ArrayList;
  */
 public interface IDatabaseService extends Remote {
 
-    public boolean operatorExists(String username, String taxCode) throws RemoteException;
+    public boolean operatorExists(String username) throws RemoteException;
     public boolean pushOperator(Operator o) throws RemoteException;
-    public boolean isOperatorEnabledForLocation(Location l) throws RemoteException;
+    public boolean isOperatorEnabledForLocation(Operator o, Location l) throws RemoteException;
     public MonitoringCenter getMonitoringCenterForOperator(Operator o) throws RemoteException;
 
     public ArrayList<Location> filterLocationsByName(String filterOnName) throws RemoteException;
