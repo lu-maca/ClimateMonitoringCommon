@@ -12,8 +12,8 @@ public interface IDatabaseService extends Remote {
 
     public boolean operatorExists(String username) throws RemoteException;
     public boolean pushOperator(Operator o) throws RemoteException;
-    public boolean isOperatorEnabledForLocation(Operator o, Location l) throws RemoteException;
-    public MonitoringCenter getMonitoringCenterForOperator(Operator o) throws RemoteException;
+    public boolean isOperatorEnabledForLocation(String username, Location l) throws RemoteException;
+    public MonitoringCenter getMonitoringCenterForOperator(String username) throws RemoteException;
 
     public ArrayList<Location> filterLocationsByName(String filterOnName) throws RemoteException;
     public ArrayList<Location> filterLocationsByCoordinates(Coordinates coordinates) throws RemoteException;
