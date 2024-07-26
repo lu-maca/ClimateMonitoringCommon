@@ -5,8 +5,7 @@
  */
 package uni.climatemonitor.common;
 import java.io.Serializable;
-import java.sql.Date;
-
+import java.time.LocalDate;
 
 public class ClimateParameter implements Serializable {
     static final long serialVersionUID = 1L;
@@ -20,14 +19,14 @@ public class ClimateParameter implements Serializable {
     int glaciersAlt;
     int glaciersMass;
     String notes;
-    Date date;
+    LocalDate date;
     String who;
 
     /**
      * constructor
      */
     public ClimateParameter(String geonameId, int wind, int humidity, int pressure, int temperature, int rainfall,
-                     int glaciersAlt, int glaciersMass, String notes, Date date, String who ) {
+                     int glaciersAlt, int glaciersMass, String notes, LocalDate date, String who ) {
         this.geonameId = geonameId;
         this.wind = wind;
         this.humidity = humidity;
@@ -73,7 +72,7 @@ public class ClimateParameter implements Serializable {
         return geonameId;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 

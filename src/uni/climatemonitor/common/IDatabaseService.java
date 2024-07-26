@@ -2,7 +2,7 @@ package uni.climatemonitor.common;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
-import java.sql.Date;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
@@ -20,7 +20,7 @@ public interface IDatabaseService extends Remote {
     public boolean locationExists(Location l) throws RemoteException;
     public boolean pushLocation(Location l) throws RemoteException;
 
-    public ClimateParameter getClimateParameterForDate(Date date) throws RemoteException;
+    public ClimateParameter getClimateParameterForDate(LocalDate date) throws RemoteException;
     public boolean pushClimateParameter(ClimateParameter p) throws RemoteException;
 
     public MonitoringCenter getMonitoringCenterFromName(String name) throws RemoteException;
