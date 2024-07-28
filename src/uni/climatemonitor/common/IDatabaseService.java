@@ -25,4 +25,5 @@ public interface IDatabaseService extends Remote {
 
     public MonitoringCenter getMonitoringCenterFromName(String name) throws RemoteException;
     public boolean pushMonitoringCenter(MonitoringCenter c) throws RemoteException;
+    public ArrayList<MonitoringCenter> getAllMonitoringCenters() throws RemoteException;
 }
