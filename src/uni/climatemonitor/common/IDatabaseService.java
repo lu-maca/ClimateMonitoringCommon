@@ -24,6 +24,6 @@ public interface IDatabaseService extends Remote {
     public boolean pushClimateParameter(ClimateParameter p) throws RemoteException;
 
     public MonitoringCenter getMonitoringCenterFromName(String name) throws RemoteException;
-    public boolean pushMonitoringCenter(MonitoringCenter c) throws RemoteException;
+    public boolean pushMonitoringCenter(MonitoringCenter c, ArrayList<Location> monitoredAreas) throws RemoteException;
     public boolean isMonitoringCentersTableEmpty() throws RemoteException;
 }
