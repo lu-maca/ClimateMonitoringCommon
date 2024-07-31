@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public interface IDatabaseService extends Remote {
 
-    public boolean operatorExists(String username) throws RemoteException;
+    public Operator operatorExists(String username) throws RemoteException;
     public boolean pushOperator(Operator o) throws RemoteException;
     public boolean isOperatorEnabledForLocation(String username, Location l) throws RemoteException;
     public MonitoringCenter getMonitoringCenterForOperator(String username) throws RemoteException;
@@ -24,6 +24,7 @@ public interface IDatabaseService extends Remote {
     public boolean pushClimateParameter(ClimateParameter p) throws RemoteException;
 
     public MonitoringCenter getMonitoringCenterFromName(String name) throws RemoteException;
-    public boolean pushMonitoringCenter(MonitoringCenter c, ArrayList<Location> monitoredAreas) throws RemoteException;
+    public boolean pushMonitoringCenter(MonitoringCenter c, ArrayList<String> monitoredAreas) throws RemoteException;
     public boolean isMonitoringCentersTableEmpty() throws RemoteException;
+    public ArrayList<MonitoringCenter> getAllMonitoringCenters() throws RemoteException;
 }
