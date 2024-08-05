@@ -22,6 +22,7 @@ public interface IDatabaseService extends Remote {
 
     public ClimateParameter getClimateParameterForDate(Location l, LocalDate date) throws RemoteException;
     public boolean pushClimateParameter(ClimateParameter p) throws RemoteException;
+    public ArrayList<ClimateParameter> getClimateParameterHistory(Location l) throws RemoteException;
 
     public MonitoringCenter getMonitoringCenterFromName(String name) throws RemoteException;
     public boolean pushMonitoringCenter(MonitoringCenter c, ArrayList<String> monitoredAreas) throws RemoteException;
