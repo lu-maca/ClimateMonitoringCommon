@@ -28,4 +28,6 @@ public interface IDatabaseService extends Remote {
     public boolean pushMonitoringCenter(MonitoringCenter c, ArrayList<String> monitoredAreas) throws RemoteException;
     public boolean isMonitoringCentersTableEmpty() throws RemoteException;
     public ArrayList<MonitoringCenter> getAllMonitoringCenters() throws RemoteException;
+
+    public boolean addLocationToMonitoringCenter(Location l, MonitoringCenter mc) throws RemoteException;
 }
