@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public interface IDatabaseService extends Remote {
 
     public Operator operatorExists(String username) throws RemoteException;
-    public boolean pushOperator(Operator o) throws RemoteException;
+    public boolean pushOperator(Operator o, MonitoringCenter mc) throws RemoteException;
     public boolean isOperatorEnabledForLocation(String username, Location l) throws RemoteException;
     public MonitoringCenter getMonitoringCenterForOperator(String username) throws RemoteException;
 
