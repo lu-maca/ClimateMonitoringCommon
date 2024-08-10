@@ -19,6 +19,7 @@ public interface IDatabaseService extends Remote {
     public ArrayList<Location> filterLocationsByCoordinates(Coordinates coordinates) throws RemoteException;
     public boolean locationExists(Location l) throws RemoteException;
     public boolean pushLocation(Location l) throws RemoteException;
+    public ArrayList<Location> getLocationsFromMonitoringCenter(String mc_id) throws RemoteException;
 
     public ClimateParameter getClimateParameterForDate(Location l, LocalDate date) throws RemoteException;
     public boolean pushClimateParameter(ClimateParameter p) throws RemoteException;
